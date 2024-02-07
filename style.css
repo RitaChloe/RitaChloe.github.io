@@ -1,0 +1,59 @@
+
+body{
+    background-color: rgb(45, 45, 45);
+    font-family: Ubuntu Mono, Righteous,Verdana, Arial;
+}
+
+h1{
+    color:white
+}
+
+h2{
+    color:white
+}
+
+p{
+    color:white
+}
+ pre{
+    color:white
+ }
+
+h1{
+    border-style: solid;
+    border-width: 3px;
+    border-color: crimson;
+    text-align: center;
+}
+
+h1{
+    text-shadow: 4px 4px 5px red ;  text-shadow: 4px 4px 5px red
+
+}
+
+a{
+    border-style: solid;
+    color: crimson;
+    padding: 5px;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(28, 28, 28);
+    padding: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: none;
+    padding: 15px;
+    display:block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: rgb(110, 109, 109);
+}
+.navbar li{
+    float: left;
+}
