@@ -5,7 +5,70 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
+        <style type="text/css">
+            div {text-align: center;}
+        
+            #image {border: 5px solid #000000;}
+
+	        #header {color: black; font-size: 110%;}
+
+	        .link {cursor: hand; cursor: pointer;}
+
+
+        </style>
+        <script type="text/javascript">
+
+
+            var counter = 0;
+            
+            var captionArray = new Array("Zi Yang photo", "Boon Xuan Photo", "Fui Tat Photo");
+            
+            var imageArray = new Array();
+            imageArray[0] = new Image(); 
+            imageArray[1] = new Image();  
+            imageArray[2] = new Image();   
+            imageArray[0].src = "Zi Yang photo.jpg"; 
+            imageArray[1].src = "Boon Xuan Photo.jpg";
+            imageArray[2].src = "Fui Tat Photo.jpg"; 
+            
+            
+            function changeImage(index){
+            
+                var temp = document.getElementById("image");
+            
+                counter = index;
+            
+                temp.setAttribute("src", imageArray[counter].src);
+            
+                document.getElementById("header").innerHTML = captionArray[counter];
+            }
+            
+            
+            function nextImage(index){
+                
+                if (counter == 2){
+                    counter = 0;
+                } else {
+                    counter++;
+                }
+            
+                changeImage(counter);
+            }
+            
+            
+            function previousImage(index){
+            
+                if (counter == 0){
+                    counter = 2;
+                } else {
+                    counter--;
+                }
+            
+                changeImage(counter);
+            }
+            
+            </script>
+            </head>
         <body>
             <nav class="navbar">
             <ul>
@@ -60,12 +123,29 @@
             <br>
             <hr>
         <p>We are happy with the stuff we've made and had much fun making them too!</p>
-
-                <a href="index.html"
-                class="creations">
-                Back To Home
-                </a>
-
+                
+        <div>
+	
+            <h1 id="header">Gallery</h1>
+                    
+            <img id="image" src="Zi Yang photo.jpg" /><br />
+                    
+            <img id="previous" class="link" src="prev.gif"
+                onMouseOut="previous.src=prev.gif"
+                onMouseOver="previous.src='prevover.gif' "
+                onClick="previousImage();" />
+                    
+            <img id="next" class="link" src="next.gif"
+                onMouseOut="next.src='nextover.gif'"
+                onMouseOver="next.src='nextover.gif'"
+                onClick="nextImage();" />
+        </div>
             
+                <hr>
+                <a href="index.html"
+            class="creations">
+            Back To Home
+            </a>
+        
         </body>
     </html>
