@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu+Mono&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     </head>
     <body>
         <img src="photo_2022-04-09_11-14-21-removebg-preview.png"
@@ -65,23 +65,19 @@
         <br>
         
         <h1>Feedback</h1>
-        <div class="container">
-            <form action="action_page.php">
-          
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-          
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-          
-              <label for="Email">Email</label>
-              <input type="text" id="email" name="email" placeholder="Your Email..">
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST">
 
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          
-              <input type="submit" value="Submit">
-          
+                <input type="hidden" name="access_key" value="5107cf4d-e613-4d10-a9dd-b873c2e4a0cf">
+            
+                <input type="text" name="name" placeholder="Your name.." required>
+                <input type="email" name="email" placeholder="Your email.." required>
+                <textarea name="message" placeholder="Your Feedback.."" required></textarea>
+                <button type="submit">Submit Form</button>
+            
+            </form>
+            
+        
             </form>
           </div> 
         </body>
