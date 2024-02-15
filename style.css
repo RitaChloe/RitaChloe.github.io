@@ -133,3 +133,35 @@ html { overflow-y: scroll; }
     width: 800px;
     height: 550px;
 }
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+  input[type=submit] {
+    background-color: #050505;
+    color: rgb(253, 118, 118);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  input[type=submit]:hover {
+    background-color: #020202;
+  }
+  
+  
+  .container {
+    border-radius: 5px;
+    background-color: #ecb2b2;
+    padding: 20px;
+  }
